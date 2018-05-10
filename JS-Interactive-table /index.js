@@ -1,4 +1,3 @@
-// Get references to the tbody element, input field and button
 var tbody = document.querySelector("tbody");
 var dateInput = document.querySelector("#date");
 var cityInput = document.querySelector("#city");
@@ -8,7 +7,7 @@ var shapeInput = document.querySelector("#shape");
 var searchBtn = document.querySelector("#search");
 
 
-// Add an event listener to the searchButton, call handleSearchButtonClick when clicked
+
 searchBtn.addEventListener("click", handleSearchButtonClick);
 
 var filteredData = dataSet;
@@ -19,13 +18,18 @@ function renderTable() {
     var data = filteredData[i];
     var fields = Object.keys(data);
     var row = tbody.insertRow(i);
-    for (var j = 0; j < fields.length; j++) {
-      var field = fields[j];
-      var cell = row.insertCell(j);
-      cell.innerText = data[field];
-    };
+    
+
+      for (var j = 0; j < fields.length; j++) {
+        var field = fields[j];
+        var cell = row.insertCell(j);
+        cell.innerText = data[field];
+      };
+
+    }
+    
   };
-};
+
 
 
 renderTable();
@@ -38,7 +42,7 @@ function handleSearchButtonClick() {
   var addressCountry = countryInput.value.trim().toLowerCase();
   var addressShape =  shapeInput.value.trim().toLowerCase();
 
-
+  
   function filterDataset (filteredData) {
     var filtered = [];
     for (var k = 0; k < filteredData.length; ++k) {
@@ -56,6 +60,8 @@ function handleSearchButtonClick() {
 
   renderTable();
 };
+
+
 
 
 

@@ -2,5 +2,23 @@
     display: inline-block;
     width: 250px;
     margin-top: 50px;
-  }
+  };
+
+  td {
+    border: 1px solid black;
+    };
+
+    table {
+      border-collapse: collapse;
+    };
+
+#ufo {
+
+  display: inline;
+    
+    color: white;
+    font-weight: bold;
   
+  text-align: center;
+}
+      
